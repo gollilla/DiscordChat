@@ -1,0 +1,8 @@
+name: DiscordChat
+main: soradore\DiscordChat\main
+version: 1.0
+api: []
+load: POSTWORLD
+author: soradore
+description: 
+
