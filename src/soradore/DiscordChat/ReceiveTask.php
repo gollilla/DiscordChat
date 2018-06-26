@@ -3,13 +3,13 @@
 namespace soradore\DiscordChat;
 
 use pocketmine\scheduler\AsyncTask;
-use Spoofchecker\Server;
+use pocketmine\Server;
 
 class ReceiveTask extends AsyncTask {
 
 	public $message = '';
 
-	public function onRun(int $tick){
+	public function onRun(){
 		$socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
 		socket_bind($socket, 'localhost', 8080);
 		socket_recvfrom($socket, $buf, 1000, 0, $from, $port);
