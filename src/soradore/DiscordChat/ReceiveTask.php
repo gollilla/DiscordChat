@@ -17,7 +17,7 @@ class ReceiveTask extends AsyncTask {
 	}
 
 	public function onCompletion(Server $server){
-		$server->bloasCastMessage($this->message);
+		$server->broadcastMessage($this->message);
 		$task = new ReceiveTask();
 		$server->getAsyncPool()->submitTask($task);
 	}
